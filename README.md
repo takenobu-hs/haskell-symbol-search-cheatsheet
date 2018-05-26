@@ -27,7 +27,7 @@ data Vec = Vec !Int
 ---
 `!` : "bang pattern"
 -------------------
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html?highlight=bang%20pattern#bang-patterns-informal) \]
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#bang-patterns-informal) \]
 
 ```Haskell
 f1 !x = 
@@ -37,7 +37,7 @@ f1 !x =
 ---
 `#` : "MagicHash"
 -------------------
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html?highlight=magichash#the-magic-hash) \]
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#the-magic-hash) \]
 
 ```Haskell
 data Int = I# Int#
@@ -47,7 +47,7 @@ data Int = I# Int#
 ---
 `$( )` : Template Haskell’s splice syntax
 ------------------
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html?highlight=template%20haskell#template-haskell) \]
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#template-haskell) \]
 
 ```Haskell
 two = $(add1 1)
@@ -57,7 +57,7 @@ two = $(add1 1)
 ---
 `'` : promoted constructors are prefixed by a tick '
 -------------------
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html?highlight=data%20promotion#datatype-promotion) \]
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#datatype-promotion) \]
 
 ```Haskell
 type * = TYPE 'LiftedRep
@@ -67,7 +67,7 @@ type * = TYPE 'LiftedRep
 ---
 `(#  #)` : "unboxed tuple"
 -------------------
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html?highlight=unbox%20tuple#unboxed-tuples) \]
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#unboxed-tuples) \]
 
 ```Haskell
 f x y = (# x+1, y-1 #)
@@ -77,7 +77,7 @@ f x y = (# x+1, y-1 #)
 ---
 `->` : "view pattern"
 -------------------
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html?highlight=unbox%20tuple#unboxed-tuples) \]
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#view-patterns) \]
 
 ```Haskell
 size (view -> Unit) = 1
@@ -98,7 +98,7 @@ f s@(x:xs) =
 ---
 `@` : "type application"
 ------------------
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html?highlight=type%20application#extension-TypeApplications) \]
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#extension-TypeApplications) \]
 
 
 ```Haskell
@@ -107,9 +107,22 @@ f = read @Int
 
 
 ---
+`;` : semicolon in Layout rule
+------------------
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch2.html) \]
+
+
+```Haskell
+f x = let a = 1; b = 2  
+          g y = exp2  
+      in exp1 
+```
+
+
+---
 `[|  |]` : Template Haskell’s quotation syntax
 ------------------
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html?highlight=template%20haskell#template-haskell) \]
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#template-haskell) \]
 
 ```Haskell
 add1 x = [| x + 1 |]
@@ -131,7 +144,7 @@ f _    =
 ---
 `{..}` : "record wildcard"
 ------------------
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html?highlight=record%20wild%20card#record-wildcards) \]
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#record-wildcards) \]
 
 
 ```Haskell
@@ -142,7 +155,7 @@ f Vec{..} =
 ---
 `|` : "functional dependencies"
 ------------------
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html?highlight=functionaldependencies#functional-dependencies) \]
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#functional-dependencies) \]
 
 
 ```Haskell
@@ -157,6 +170,16 @@ class Foo a b c | a b -> c where
 
 ```Haskell
 f1 ~(as,bs) =
+```
+
+
+---
+`~` : "equality constraint"
+-------------------
+\[ [GHC User’s Guide](https://downloads.haskell.org/%7Eghc/latest/docs/html/users_guide/glasgow_exts.html#equality-constraints) \]
+
+```Haskell
+class (F a ~ b) => C a b where
 ```
 
 
