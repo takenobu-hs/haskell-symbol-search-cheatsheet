@@ -120,6 +120,18 @@ f x = let a = 1; b = 2
 
 
 ---
+`<-` : "pattern guard"
+------------------
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch4.html#x10-620004) \]
+
+
+```Haskell
+f x
+  | Just y <- g x = 
+```
+
+
+---
 `[|  |]` : Template Haskell’s quotation syntax
 ------------------
 \[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#template-haskell) \]
