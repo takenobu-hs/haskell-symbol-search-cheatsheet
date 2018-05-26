@@ -164,6 +164,16 @@ f _    =
 
 
 ---
+`_` : "typed hole"
+-------------------
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#typed-holes) \]
+
+```Haskell
+sum xs = foldr _ 0 xs
+```
+
+
+---
 `{..}` : "record wildcard"
 ------------------
 \[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#record-wildcards) \]
