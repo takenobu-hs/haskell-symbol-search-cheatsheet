@@ -45,6 +45,16 @@ data Int = I# Int#
 
 
 ---
+`#` : "OverloadedLabels"
+-------------------
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#overloaded-labels) \]
+
+```Haskell
+example = #x (Point 1 2)
+```
+
+
+---
 `$( )` : Template Haskell’s splice syntax
 ------------------
 \[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#template-haskell) \]
