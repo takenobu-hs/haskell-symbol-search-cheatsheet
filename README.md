@@ -164,6 +164,16 @@ f _    =
 
 
 ---
+`_` : "starts-with-underscore"
+-------------------
+\[ [GHC User’s Guide](http://downloads.haskell.org/~ghc/latest/docs/html/users_guide/using-warnings.html#ghc-flag--Wunused-binds) \]
+
+```Haskell
+_w = True                -- No warning: _w starts with an underscore
+```
+
+
+---
 `_` : "typed hole"
 -------------------
 \[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#typed-holes) \]
