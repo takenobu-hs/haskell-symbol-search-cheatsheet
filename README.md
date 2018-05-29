@@ -165,9 +165,9 @@ f _    =
 
 
 ---
-`_` : "starts-with-underscore"
+`_` : unused identifiers beginning with underscore
 -------------------
-\[ [GHC User’s Guide](http://downloads.haskell.org/~ghc/latest/docs/html/users_guide/using-warnings.html#ghc-flag--Wunused-binds) \]
+\[ [GHC User’s Guide](http://downloads.haskell.org/~ghc/latest/docs/html/users_guide/using-warnings.html#ghc-flag--Wunused-binds) \] \[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch2.html#x7-180002.4) \]
 
 ```Haskell
 _w = True                -- No warning: _w starts with an underscore
