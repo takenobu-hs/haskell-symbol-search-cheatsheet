@@ -18,7 +18,7 @@ Happy Haskelling!
 ---
 `!` : "strictness flag"
 -------------------
-\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch4.html) \]
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch4.html#x10-680004.2) \]
 
 ```Haskell
 data Vec = Vec !Int
@@ -99,7 +99,7 @@ size (view -> Arrow t1 t2) = size t1 + size t2
 ---
 `@` : "as pattern"
 -------------------
-\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html) \]
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html#x8-580003.17) \]
 
 ```Haskell
 f s@(x:xs) = 
@@ -120,7 +120,7 @@ f = read @Int
 ---
 `;` : semicolon in Layout rule
 ------------------
-\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch2.html) \]
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch2.html#x7-210002.7) \]
 
 
 ```Haskell
@@ -133,7 +133,7 @@ f x = let a = 1; b = 2
 ---
 `<-` : "pattern guard"
 ------------------
-\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch4.html#x10-620004) \]
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch4.html#x10-830004.4.3) \]
 
 
 ```Haskell
@@ -155,7 +155,7 @@ add1 x = [| x + 1 |]
 ---
 `_` : "wildcard pattern"
 -------------------
-\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html) \]
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html#x8-580003.17) \]
 
 ```Haskell
 f Red  =
@@ -209,7 +209,7 @@ class Foo a b c | a b -> c where
 ---
 `~` : "irrefutable pattern"
 -------------------
-\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch10.html) \]
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html#x8-580003.17) \]
 
 ```Haskell
 f1 ~(as,bs) =
