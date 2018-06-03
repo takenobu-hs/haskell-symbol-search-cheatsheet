@@ -102,9 +102,9 @@ https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.htm
 
 ```Haskell
 f :: (# Int | Bool | Char #) -> Int
-f (# x | | #) = 1
+f (# x | | #)    = 1
 f (# | True | #) = 2
-f _ = 3
+f _              = 3
 ```
 
 ---
@@ -113,7 +113,7 @@ f _ = 3
 \[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#view-patterns) \]
 
 ```Haskell
-size (view -> Unit) = 1
+size (view -> Unit)        = 1
 size (view -> Arrow t1 t2) = size t1 + size t2
 ```
 
