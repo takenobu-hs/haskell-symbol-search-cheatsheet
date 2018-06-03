@@ -76,6 +76,16 @@ type * = TYPE 'LiftedRep
 
 
 ---
+`( )` : "section" - a convenient syntax for partial application
+-------------------
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html#x8-300003.5) \]
+
+```Haskell
+add1 = (1+)
+```
+
+
+---
 `(#  #)` : "unboxed tuple"
 -------------------
 \[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#unboxed-tuples) \]
@@ -96,8 +106,13 @@ size (view -> Arrow t1 t2) = size t1 + size t2
 ```
 
 
+---
+`:` : an operator symbol starting with a colon is a constructor
+-------------------
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch2.html#x7-180002.4) \]
+
 ```Haskell
-f = read @Int
+data NonEmpty a = a :| [a]
 ```
 
 
@@ -141,6 +156,10 @@ f s@(x:xs) =
 ------------------
 \[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#extension-TypeApplications) \]
 
+```Haskell
+f = read @Int
+```
+
 
 ---
 `[|  |]` : Template Haskell’s quotation syntax
@@ -181,6 +200,26 @@ _w = True                -- No warning: _w starts with an underscore
 
 ```Haskell
 sum xs = foldr _ 0 xs
+```
+
+
+---
+`\pattern ->` : "lambda abstraction"
+-------------------
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html#x8-260003.3) \]
+
+```Haskell
+add1 = \x -> x + 1
+```
+
+
+---
+`` ` ` `` : "infix notation" - an identifier enclosed in grave accents
+-------------------
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html#x8-240003.2) \]
+
+```Haskell
+div10 x = x `div` 10
 ```
 
 
