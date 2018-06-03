@@ -94,6 +94,18 @@ add1 = (1+)
 f x y = (# x+1, y-1 #)
 ```
 
+---
+`(# | | #)` : "unboxed sums"
+-------------------
+\[ [GHC User’s Guide](
+https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#extension-UnboxedSums) \]
+
+```Haskell
+f :: (# Int | Bool | Char #) -> Int
+f (# x | | #) = 1
+f (# | True | #) = 2
+f _ = 3
+```
 
 ---
 `->` : "view pattern"
