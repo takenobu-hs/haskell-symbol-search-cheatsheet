@@ -117,7 +117,7 @@ data NonEmpty a = a :| [a]
 
 
 ---
-`;` : semicolon in Layout rule
+`;` : semicolon in layout rule
 ------------------
 \[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch2.html#x7-210002.7) \]
 
@@ -235,10 +235,21 @@ f Vec{..} =
 
 
 ---
+`|` : "boolean guard" (guard)
+------------------
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch4.html#x10-830004.4.3) \]
+
+```Haskell
+clip255 x
+  | x > 255   = 255
+  | otherwise = x 
+```
+
+
+---
 `|` : "functional dependencies"
 ------------------
 \[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#functional-dependencies) \]
-
 
 ```Haskell
 class Foo a b c | a b -> c where 
