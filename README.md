@@ -96,22 +96,6 @@ size (view -> Arrow t1 t2) = size t1 + size t2
 ```
 
 
----
-`@` : "as pattern"
--------------------
-\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html#x8-580003.17) \]
-
-```Haskell
-f s@(x:xs) = 
-```
-
-
----
-`@` : "type application"
-------------------
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#extension-TypeApplications) \]
-
-
 ```Haskell
 f = read @Int
 ```
@@ -140,6 +124,22 @@ f x = let a = 1; b = 2
 f x
   | Just y <- g x = 
 ```
+
+
+---
+`@` : "as pattern"
+-------------------
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html#x8-580003.17) \]
+
+```Haskell
+f s@(x:xs) = 
+```
+
+
+---
+`@` : "type application"
+------------------
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#extension-TypeApplications) \]
 
 
 ---
