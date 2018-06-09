@@ -66,12 +66,64 @@ two = $(add1 1)
 
 
 ---
+`'` : an identifier consists of a letter followed by zero or more letters, digits, underscores, and single quotes
+-------------------
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch2.html#x7-180002.4) \]
+
+```Haskell
+xs' = f ys
+```
+
+
+---
 `'` : promoted constructors are prefixed by a tick '
 -------------------
 \[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#datatype-promotion) \]
 
 ```Haskell
 type * = TYPE 'LiftedRep
+```
+
+
+---
+`'` `''` : Template Haskell’s quotation syntax
+-------------------
+\[ [GHC User’s Guide](https://downloads.haskell.org/%7Eghc/latest/docs/html/users_guide/glasgow_exts.html#th-syntax) \]
+
+```Haskell
+makeLenses ''FooBar
+```
+
+
+---
+`()` : "unit type"
+-------------------
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch4.html#x10-650004.1.2) \]
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch6.html#x13-1220006.1.5) \]
+
+```Haskell
+main :: IO ()
+```
+
+
+---
+`()` : "unit expression"
+-------------------
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html#x8-380003.9) \]
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch6.html#x13-1220006.1.5) \]
+
+```Haskell
+return ()
+```
+
+
+---
+`(,)` : the constructor for a tuple
+-------------------
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html#x8-360003.8) \]
+
+```Haskell
+f x y = liftM2 (,) x y 
 ```
 
 
@@ -106,6 +158,52 @@ f (# | True | #) = 2
 f _              = 3
 ```
 
+
+---
+`(..)` : export all of its names
+-------------------
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch5.html#x11-1000005.2) \]
+
+```Haskell
+module GHC.Arr (
+        Ix(..),
+```
+
+
+---
+`(..)` : import all of its names 
+-------------------
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch5.html#x11-1010005.3) \]
+
+```Haskell
+import GHC.Types (Bool(..))
+```
+
+
+---
+`*` : the kind of ordinary datatypes (synonym for TYPE `LiftedRep)
+-------------------
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch4.html#x10-640004.1.1) \]
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#levity-polymorphism) \]
+
+```Haskell
+ghci> :kind Int
+Int :: *
+```
+
+
+---
+`->` : case expression
+-------------------
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html#x8-460003.13) \]
+
+```Haskell
+f x = case x of
+        Nothing -> False
+        Just _  -> True
+```
+
+
 ---
 `->` : "view pattern"
 -------------------
@@ -118,12 +216,55 @@ size (view -> Arrow t1 t2) = size t1 + size t2
 
 
 ---
+`->` : "function type"
+-------------------
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch4.html#x10-650004.1.2) \]
+
+```Haskell
+id :: a -> a
+```
+
+
+---
+`:` : "list constructor" (cons)
+-------------------
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html#x8-340003.7) \]
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch6.html#x13-1200006.1.3) \]
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch2.html#x7-180002.4) \]
+
+```Haskell
+f x xs = x:xs
+```
+
+
+---
 `:` : an operator symbol starting with a colon is a constructor
 -------------------
 \[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch2.html#x7-180002.4) \]
 
 ```Haskell
 data NonEmpty a = a :| [a]
+```
+
+
+---
+`::` : "type signature"
+-------------------
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch4.html#x10-810004.4.1) \]
+
+```Haskell
+id :: a -> a
+id x =  x
+```
+
+
+---
+`::` : "expression type-signature" (type annotation)
+-------------------
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html#x8-560003.16) \]
+
+```Haskell
+x = fromIntegral (maxBound::Int)
 ```
 
 
@@ -141,6 +282,18 @@ f x = let a = 1; b = 2
 
 
 ---
+`<-` : lambda-bound in do expression
+-------------------
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html#x8-470003.14) \]
+
+```Haskell
+f = do
+  x <- getLine
+  putStrLn x
+```
+
+
+---
 `<-` : "pattern guard"
 ------------------
 \[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch4.html#x10-830004.4.3) \]
@@ -149,6 +302,17 @@ f x = let a = 1; b = 2
 ```Haskell
 f x
   | Just y <- g x = 
+```
+
+
+---
+`=>` : context (type class constraint)
+-------------------
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch4.html#x10-660004.1.3) \]
+
+```Haskell
+subtract :: (Num a) => a -> a -> a
+subtract x y = y - x
 ```
 
 
@@ -169,6 +333,38 @@ f s@(x:xs) =
 
 ```Haskell
 f = read @Int
+```
+
+
+---
+`[]` : "empty list" (nil)
+-------------------
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html#x8-340003.7) \]
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch6.html#x13-1200006.1.3) \]
+
+```Haskell
+null [] = True
+null _  = False
+```
+
+
+---
+`[ .. ]` : "arithmetic sequence"
+-------------------
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html#x8-400003.10) \]
+
+```Haskell
+xs = [1..10]
+```
+
+
+---
+`[ | <- ]` : "list comprehension"
+-------------------
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html#x8-420003.11) \]
+
+```Haskell
+xs = [x^2 | x <- [1..10]] 
 ```
 
 
@@ -226,12 +422,46 @@ add1 = \x -> x + 1
 
 
 ---
+`\case ->` : "LambdaCase"
+-------------------
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#lambda-case) \]
+
+```Haskell
+f = \case
+      Red  -> 2
+      Blue -> 1
+      _    -> 0
+
+```
+
+
+---
 `` ` ` `` : "infix notation" - an identifier enclosed in grave accents
 -------------------
 \[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html#x8-240003.2) \]
 
 ```Haskell
 div10 x = x `div` 10
+```
+
+
+---
+`{ }` : brace in layout rule
+-------------------
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch2.html#x7-210002.7) \]
+
+```Haskell
+f x = case x of {Nothing -> False; Just _ -> True}
+```
+
+
+---
+`{ }` : "record syntax" (datatypes with field labels)
+-------------------
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html#x8-490003.15) \]
+
+```Haskell
+data MyPoint = Point { x :: Int, y :: Int }
 ```
 
 
@@ -254,6 +484,18 @@ f Vec{..} =
 clip255 x
   | x > 255   = 255
   | otherwise = x 
+```
+
+
+---
+`|` : "MultiWayIf"
+-------------------
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#multi-way-if-expressions) \]
+
+```Haskell
+if | x == ":q" -> quit
+   | isError x -> errorExit x
+   | otherwise -> execCommand x
 ```
 
 
