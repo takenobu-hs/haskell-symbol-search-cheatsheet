@@ -95,10 +95,9 @@ f x y = (# x+1, y-1 #)
 ```
 
 ---
-`(# | | #)` : "unboxed sums"
+`(# | | #)` : "unboxed sum"
 -------------------
-\[ [GHC User’s Guide](
-https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#extension-UnboxedSums) \]
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#unboxed-sums) \]
 
 ```Haskell
 f :: (# Int | Bool | Char #) -> Int
@@ -198,7 +197,8 @@ f _    =
 ---
 `_` : unused identifiers beginning with underscore
 -------------------
-\[ [GHC User’s Guide](http://downloads.haskell.org/~ghc/latest/docs/html/users_guide/using-warnings.html#ghc-flag--Wunused-binds) \] \[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch2.html#x7-180002.4) \]
+\[ [GHC User’s Guide](http://downloads.haskell.org/~ghc/latest/docs/html/users_guide/using-warnings.html#ghc-flag--Wunused-binds) \]
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch2.html#x7-180002.4) \]
 
 ```Haskell
 _w = True                -- No warning: _w starts with an underscore
@@ -216,7 +216,7 @@ sum xs = foldr _ 0 xs
 
 
 ---
-`\pattern ->` : "lambda abstraction"
+`\ ->` : "lambda abstraction"
 -------------------
 \[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html#x8-260003.3) \]
 
@@ -240,7 +240,6 @@ div10 x = x `div` 10
 ------------------
 \[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#record-wildcards) \]
 
-
 ```Haskell
 f Vec{..} = 
 ```
@@ -259,7 +258,7 @@ clip255 x
 
 
 ---
-`|` : "functional dependencies"
+`|` : "functional dependency"
 ------------------
 \[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#functional-dependencies) \]
 
