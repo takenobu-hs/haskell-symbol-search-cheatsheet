@@ -118,22 +118,22 @@ return ()
 
 
 ---
-`(,)` : the constructor for a tuple
--------------------
-\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html#x8-360003.8) \]
-
-```Haskell
-f x y = liftM2 (,) x y 
-```
-
-
----
 `( )` : "section" - a convenient syntax for partial application
 -------------------
 \[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html#x8-300003.5) \]
 
 ```Haskell
 add1 = (1+)
+```
+
+
+---
+`(,)` : the constructor for a tuple
+-------------------
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html#x8-360003.8) \]
+
+```Haskell
+f x y = liftM2 (,) x y 
 ```
 
 
