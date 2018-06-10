@@ -7,7 +7,7 @@ Several features of Haskell/GHC have low googleability.
 Because some of them are composed of symbols :)  
 This page is a reference collection to support search of them.
 
-If you want to search for function symbols like `<*>`, `$`, `>>=`, ..., you can use the following search engines:
+If you want to search for function symbols like `<*>`, `$`, `.`, `>>=`, ..., you can use the following search engines:
   * [Hoogle search on Stackage](https://www.stackage.org)
   * [Hoogle on Haskell.org](https://www.haskell.org/hoogle)
   | [Hoogle 5 on Haskell.org](https://hoogle.haskell.org/)
@@ -431,7 +431,6 @@ f = \case
       Red  -> 2
       Blue -> 1
       _    -> 0
-
 ```
 
 
