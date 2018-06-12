@@ -181,9 +181,10 @@ import GHC.Types (Bool(..))
 
 
 ---
-`*` : the kind of ordinary datatypes (synonym for TYPE `LiftedRep)
+`*` : the kind of ordinary types (synonym for `Type` and ``TYPE `LiftedRep``)
 -------------------
 \[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch4.html#x10-640004.1.1) \]
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#the-kind) \]
 \[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#levity-polymorphism) \]
 
 ```Haskell
