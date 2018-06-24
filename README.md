@@ -226,6 +226,27 @@ id :: a -> a
 ```
 
 
+`.` : module names are a dot-separated sequence
+------------------
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch2.html#x7-180002.4) \]
+
+```Haskell
+import Data.Maybe
+import qualified Text.Read.Lex as L
+
+lexP = lift L.lex
+```
+
+
+`.` : universal quantification
+------------------
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#explicit-universal-quantification-forall) \]
+
+```Haskell
+f :: forall a. a -> [a]
+```
+
+
 ---
 `:` : "list constructor" (cons)
 -------------------
@@ -496,6 +517,15 @@ clip255 x
 if | x == ":q" -> quit
    | isError x -> errorExit x
    | otherwise -> execCommand x
+```
+
+
+`|` : "algebraic datatype declaration"
+------------------
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch4.html#x10-690004.2.1) \]
+
+```Haskell
+data Maybe a = Nothing | Just a
 ```
 
 
