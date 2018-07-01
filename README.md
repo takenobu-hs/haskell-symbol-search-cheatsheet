@@ -497,6 +497,22 @@ f Vec{..} =
 
 
 ---
+`{-#  #-}` : "compiler pragma"
+------------------
+
+\[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch12.html#x19-18800012) \]
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#pragmas) \]
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#language-options) \]
+
+```Haskell
+{-# LANGUAGE TypeApplications #-}
+{-# LANGUAGE GADTs            #-}
+
+{-# INLINE fmap #-}
+ ```
+
+
+---
 `|` : "boolean guard" (guard)
 ------------------
 \[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch4.html#x10-830004.4.3) \]
@@ -520,7 +536,7 @@ if | x == ":q" -> quit
 ```
 
 
-`|` : "algebraic datatype declaration"
+`|` : algebraic datatype declaration
 ------------------
 \[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch4.html#x10-690004.2.1) \]
 
