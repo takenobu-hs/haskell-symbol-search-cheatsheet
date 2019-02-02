@@ -434,6 +434,16 @@ sum xs = foldr _ 0 xs
 
 
 ---
+`_` : "NumericUnderscores"
+-------------------
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#numeric-underscores) \]
+
+```Haskell
+million = 1_000_000
+```
+
+
+---
 `\ ->` : "lambda abstraction"
 -------------------
 \[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html#x8-260003.3) \]
