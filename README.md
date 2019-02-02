@@ -66,6 +66,16 @@ two = $(add1 1)
 
 
 ---
+`$$( )` : Typed Template Haskell’s splice syntax
+------------------
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#template-haskell) \]
+
+```Haskell
+two = $$(add1 1)
+```
+
+
+---
 `'` : an identifier consists of a letter followed by zero or more letters, digits, underscores, and single quotes
 -------------------
 \[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch2.html#x7-180002.4) \]
@@ -397,6 +407,16 @@ xs = [x^2 | x <- [1..10]]
 
 ```Haskell
 add1 x = [| x + 1 |]
+```
+
+
+---
+`[||  ||]` : Typed Template Haskell’s quotation syntax
+------------------
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#template-haskell) \]
+
+```Haskell
+add1 x = [|| x + 1 ||]
 ```
 
 
