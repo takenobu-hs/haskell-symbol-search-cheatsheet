@@ -7,14 +7,11 @@ Several features of Haskell/GHC have low googleability.
 Because some of them are composed of symbols :)  
 This page is a reference collection to support search of them.
 
-If you want to search for operators like `<*>`, `$`, `.`, `>>=`, ..., you can use the following search engines:
+If you want to search for function symbols like `<*>`, `$`, `.`, `>>=`, ..., you can use the following search engines:
   * [Hoogle search on Stackage](https://www.stackage.org)
   * [Hoogle on Haskell.org](https://www.haskell.org/hoogle)
   | [Hoogle 5 on Haskell.org](https://hoogle.haskell.org/)
-  
-If you want to search for syntax constructs or operators used "in the wild", you can grep online through all source code on Hackage:
-
-  * [Aelve Codesearch](https://codesearch.aelve.com)
+  * [Aelve Codesearch](https://codesearch.aelve.com/haskell) (used "in the wild", and regex support)
 
 Happy Haskelling!
 
