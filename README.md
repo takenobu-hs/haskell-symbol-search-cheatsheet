@@ -56,6 +56,26 @@ example = #x (Point 1 2)
 
 
 ---
+`#` : C pre-processor's directive
+-------------------
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/phases.html#options-affecting-the-c-pre-processor) \]
+
+```Haskell
+#include "MachDeps.h"
+```
+
+
+---
+`#` : hsc2hs command's operator
+-------------------
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/utils.html#input-syntax) \]
+
+```Haskell
+flag = #const VER_MAJORVERSION
+```
+
+
+---
 `$( )` : Template Haskell’s splice syntax
 ------------------
 \[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#template-haskell) \]
@@ -144,6 +164,16 @@ add1 = (1+)
 
 ```Haskell
 f x y = liftM2 (,) x y 
+```
+
+
+---
+`(, xxx)` : "TupleSections"
+-------------------
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#extension-TupleSections) \]
+
+```Haskell
+f xs = fmap (, True) xs
 ```
 
 
@@ -345,6 +375,17 @@ f x
 ```Haskell
 subtract :: (Num a) => a -> a -> a
 subtract x y = y - x
+```
+
+
+---
+`?` : "ImplicitParams"
+-------------------
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#extension-ImplicitParams) \]
+
+```Haskell
+sort :: (?cmp :: a -> a -> Bool) => [a] -> [a]
+sort = sortBy ?cmp
 ```
 
 
