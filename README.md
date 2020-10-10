@@ -10,7 +10,6 @@ This page is a reference collection to support search of them.
 If you want to search for function symbols like `.`, `$`, `>>=`, `<*>`, ..., you can use the following search engines:
   * [Hoogle search on Stackage](https://www.stackage.org)
   * [Hoogle on Haskell.org](https://hoogle.haskell.org/)
-  * [Aelve Codesearch](https://codesearch.aelve.com/haskell) (used "in the wild", and regex support)
 
 Happy Haskelling!
 
