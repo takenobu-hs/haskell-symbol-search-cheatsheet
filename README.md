@@ -95,6 +95,16 @@ two = $$(add1 1)
 
 
 ---
+`%1 ->` : "Linear types"
+-------------------
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/linear_types.html#linear-types) \]
+
+```Haskell
+f :: a %1 -> a 
+```
+
+
+---
 `'` : an identifier consists of a letter followed by zero or more letters, digits, underscores, and single quotes
 -------------------
 \[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch2.html#x7-180002.4) \]
