@@ -451,7 +451,7 @@ xs = [x^2 | x <- [1..10]]
 
 
 ---
-`[|  |]`, `[e|  |]`, `[d|  |]`, `[t|  |]`, `[p|  |]` : Template Haskell’s expression, declaration, type, and pattern quotation syntax
+`[|  |]`, `[e|  |]`, `[d|  |]`, `[t|  |]`, `[p|  |]` : Template Haskell’s quotation syntax (expression, declaration, type, and pattern)
 ------------------
 \[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/template_haskell.html#template-haskell) \]
 
