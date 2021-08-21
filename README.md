@@ -451,12 +451,22 @@ xs = [x^2 | x <- [1..10]]
 
 
 ---
-`[|  |]` : Template Haskell’s quotation syntax
+`[|  |]`, `[d|  |]`, `[e|  |]`, `[p|  |]`, `[t|  |]` : Template Haskell’s built-in quotation syntax (valid Haskell code in, AST as value out)
 ------------------
 \[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/template_haskell.html#template-haskell) \]
 
 ```Haskell
 add1 x = [| x + 1 |]
+```
+
+
+---
+`[foo|  |]` : Template Haskell’s custom quasi-quotation syntax (arbitrary string inside, AST as compilable code out)
+------------------
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/template_haskell.html#template-haskell) \]
+
+```Haskell
+greet name = [interpolate| Hello, #name! |]
 ```
 
 
