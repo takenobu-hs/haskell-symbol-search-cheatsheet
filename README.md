@@ -494,12 +494,41 @@ _w = True                -- No warning: _w starts with an underscore
 
 
 ---
-`_` : "typed hole"
--------------------
+`_` : "typed hole (expression level)"
+-------------------------------------
 \[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/typed_holes.html#typed-holes) \]
 
 ```Haskell
 sum xs = foldr _ 0 xs
+```
+
+
+---
+`_` : "type wildcard"
+---------------------
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/partial_type_signatures.html#type-wildcards) \]
+
+```Haskell
+not' :: Bool -> _
+not' x = not x
+```
+```
+error:
+  • Found type wildcard ‘_’ standing for ‘Bool’
+```
+
+Can be [named](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/partial_type_signatures.html#named-wildcards), too.
+[`PartialTypeSignatures`](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/partial_type_signatures.html#extension-PartialTypeSignatures)
+makes the compiler accept the inferred type.
+
+
+---
+`_` : "extra constraints wildcard"
+----------------------------------
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/partial_type_signatures.html#extra-constraints-wildcard) \]
+
+```Haskell
+deriving instance _ => Eq (Foo a)
 ```
 
 
