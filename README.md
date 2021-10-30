@@ -287,6 +287,26 @@ lexP = lift L.lex
 ```
 
 
+`.` : "OverloadedRecordDot"
+------------------
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/overloaded_record_dot) \]
+
+```Haskell
+getResult c = c.result
+
+getResults = map (.result)
+```
+
+
+`.` : "OverloadedRecordUpdate" (experimental)
+------------------
+\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/overloaded_record_update) \]
+
+```Haskell
+setYearTaken c y = c{taken.year = y}
+```
+
+
 `.` : universal quantification
 ------------------
 \[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/explicit_forall.html#explicit-universal-quantification-forall) \]
