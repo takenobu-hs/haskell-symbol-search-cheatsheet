@@ -289,7 +289,7 @@ lexP = lift L.lex
 
 `.` : "OverloadedRecordDot"
 ------------------
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/overloaded_record_dot) \]
+\[ [GHC User’s Guide](https://downloads.haskell.org/ghc/9.2.1/docs/html/users_guide/exts/overloaded_record_dot.html#overloaded-record-dot) \]
 
 ```Haskell
 getResult c = c.result
@@ -300,7 +300,7 @@ getResults = map (.result)
 
 `.` : "OverloadedRecordUpdate" (experimental)
 ------------------
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/overloaded_record_update) \]
+\[ [GHC User’s Guide](https://downloads.haskell.org/ghc/9.2.1/docs/html/users_guide/exts/overloaded_record_update.html#overloaded-record-update) \]
 
 ```Haskell
 setYearTaken c y = c{taken.year = y}
