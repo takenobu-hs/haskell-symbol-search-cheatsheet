@@ -275,6 +275,7 @@ id :: a -> a
 ```
 
 
+---
 `.` : module names are a dot-separated sequence
 ------------------
 \[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch2.html#x7-180002.4) \]
@@ -287,6 +288,7 @@ lexP = lift L.lex
 ```
 
 
+---
 `.` : "OverloadedRecordDot"
 ------------------
 \[ [GHC User’s Guide](https://downloads.haskell.org/ghc/9.2.1/docs/html/users_guide/exts/overloaded_record_dot.html#overloaded-record-dot) \]
@@ -298,6 +300,7 @@ getResults = map (.result)
 ```
 
 
+---
 `.` : "OverloadedRecordUpdate" (experimental)
 ------------------
 \[ [GHC User’s Guide](https://downloads.haskell.org/ghc/9.2.1/docs/html/users_guide/exts/overloaded_record_update.html#overloaded-record-update) \]
@@ -307,6 +310,7 @@ setYearTaken c y = c{taken.year = y}
 ```
 
 
+---
 `.` : universal quantification
 ------------------
 \[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/explicit_forall.html#explicit-universal-quantification-forall) \]
@@ -667,6 +671,7 @@ if | x == ":q" -> quit
 ```
 
 
+---
 `|` : algebraic datatype declaration
 ------------------
 \[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch4.html#x10-690004.2.1) \]
