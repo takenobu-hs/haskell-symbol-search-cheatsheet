@@ -644,3 +644,22 @@ f1 ~(as,bs) =
 ```Haskell
 class (F a ~ b) => C a b where
 ```
+
+
+---
+## `~` : "laziness flag"
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/strict.html#strict-by-default-data-types) \]
+
+```Haskell
+data T = C a
+data T' = C' ~a
+```
+
+
+---
+## `~` : "lazy pattern"
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/strict.html#strict-by-default-pattern-bindings) \]
+
+```Haskell
+f ~x =
+```
