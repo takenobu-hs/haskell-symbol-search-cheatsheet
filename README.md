@@ -25,7 +25,7 @@ data Vec = Vec !Int
 
 ---
 ## `!` : "bang pattern"
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/strict.html#bang-patterns-informal) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/strict.html#bang-patterns-informal) \]
 
 ```Haskell
 f1 !x = 
@@ -34,7 +34,7 @@ f1 !x =
 
 ---
 ## `#` : "MagicHash"
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/magic_hash.html#the-magic-hash) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/magic_hash.html#the-magic-hash) \]
 
 ```Haskell
 data Int = I# Int#
@@ -43,7 +43,7 @@ data Int = I# Int#
 
 ---
 ## `#` : "OverloadedLabels"
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/overloaded_labels.html#overloaded-labels) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/overloaded_labels.html#overloaded-labels) \]
 
 ```Haskell
 example = #x (Point 1 2)
@@ -52,7 +52,7 @@ example = #x (Point 1 2)
 
 ---
 ## `#` : C pre-processor's directive
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/phases.html#options-affecting-the-c-pre-processor) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/phases.html#options-affecting-the-c-pre-processor) \]
 
 ```Haskell
 #include "MachDeps.h"
@@ -61,7 +61,7 @@ example = #x (Point 1 2)
 
 ---
 ## `#` : hsc2hs command's operator
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/utils.html#input-syntax) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/utils.html#input-syntax) \]
 
 ```Haskell
 flag = #const VER_MAJORVERSION
@@ -70,7 +70,7 @@ flag = #const VER_MAJORVERSION
 
 ---
 ## `$( )` : Template Haskell’s splice syntax
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/template_haskell.html#template-haskell) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/template_haskell.html#template-haskell) \]
 
 ```Haskell
 two = $(add1 1)
@@ -79,7 +79,7 @@ two = $(add1 1)
 
 ---
 ## `$$( )` : Typed Template Haskell’s splice syntax
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/template_haskell.html#template-haskell) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/template_haskell.html#template-haskell) \]
 
 ```Haskell
 two = $$(add1 1)
@@ -88,7 +88,7 @@ two = $$(add1 1)
 
 ---
 ## `%1 ->` : "Linear types"
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/linear_types.html#linear-types) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/linear_types.html#linear-types) \]
 
 ```Haskell
 f :: a %1 -> a 
@@ -106,7 +106,7 @@ xs' = f ys
 
 ---
 ## `'` : promoted constructors are prefixed by a tick '
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/data_kinds.html#datatype-promotion) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/data_kinds.html#datatype-promotion) \]
 
 ```Haskell
 type * = TYPE 'LiftedRep
@@ -115,7 +115,7 @@ type * = TYPE 'LiftedRep
 
 ---
 ## `'` `''` : Template Haskell’s quotation syntax
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/template_haskell.html#syntax) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/template_haskell.html#syntax) \]
 
 ```Haskell
 makeLenses ''FooBar
@@ -162,7 +162,7 @@ f x y = liftM2 (,) x y
 
 ---
 ## `(, xxx)` : "TupleSections"
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/tuple_sections.html#tuple-sections) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/tuple_sections.html#tuple-sections) \]
 
 ```Haskell
 f xs = fmap (, True) xs
@@ -171,7 +171,7 @@ f xs = fmap (, True) xs
 
 ---
 ## `(#  #)` : "unboxed tuple"
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/primitives.html#unboxed-tuples) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/primitives.html#unboxed-tuples) \]
 
 ```Haskell
 f x y = (# x+1, y-1 #)
@@ -179,7 +179,7 @@ f x y = (# x+1, y-1 #)
 
 ---
 ## `(# | | #)` : "unboxed sum"
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/primitives.html#unboxed-sums) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/primitives.html#unboxed-sums) \]
 
 ```Haskell
 f :: (# Int | Bool | Char #) -> Int
@@ -211,8 +211,8 @@ import GHC.Types (Bool(..))
 ---
 ## `*` : the kind of ordinary types (synonym for `Type` and ``TYPE `LiftedRep``)
 \[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch4.html#x10-640004.1.1) \]
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/poly_kinds.html#the-kind-type) \]
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/levity_polymorphism.html) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/poly_kinds.html#the-kind-type) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/levity_polymorphism.html) \]
 
 ```Haskell
 ghci> :kind Int
@@ -233,7 +233,7 @@ f x = case x of
 
 ---
 ## `->` : "view pattern"
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/view_patterns.html#view-patterns) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/view_patterns.html#view-patterns) \]
 
 ```Haskell
 size (view -> Unit)        = 1
@@ -264,7 +264,7 @@ lexP = lift L.lex
 
 ---
 ## `.` : "OverloadedRecordDot"
-\[ [GHC User’s Guide](https://downloads.haskell.org/ghc/9.2.1/docs/html/users_guide/exts/overloaded_record_dot.html#overloaded-record-dot) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/ghc/9.2.1/docs/html/users_guide/exts/overloaded_record_dot.html#overloaded-record-dot) \]
 
 ```Haskell
 getResult c = c.result
@@ -275,7 +275,7 @@ getResults = map (.result)
 
 ---
 ## `.` : "OverloadedRecordUpdate" (experimental)
-\[ [GHC User’s Guide](https://downloads.haskell.org/ghc/9.2.1/docs/html/users_guide/exts/overloaded_record_update.html#overloaded-record-update) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/ghc/9.2.1/docs/html/users_guide/exts/overloaded_record_update.html#overloaded-record-update) \]
 
 ```Haskell
 setYearTaken c y = c{taken.year = y}
@@ -284,7 +284,7 @@ setYearTaken c y = c{taken.year = y}
 
 ---
 ## `.` : universal quantification
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/explicit_forall.html#explicit-universal-quantification-forall) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/explicit_forall.html#explicit-universal-quantification-forall) \]
 
 ```Haskell
 f :: forall a. a -> [a]
@@ -376,7 +376,7 @@ subtract x y = y - x
 
 ---
 ## `?` : "ImplicitParams"
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/implicit_parameters.html#implicit-parameters) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/implicit_parameters.html#implicit-parameters) \]
 
 ```Haskell
 sort :: (?cmp :: a -> a -> Bool) => [a] -> [a]
@@ -395,7 +395,7 @@ f s@(x:xs) =
 
 ---
 ## `@` : "type application"
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/type_applications.html#visible-type-application) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/type_applications.html#visible-type-application) \]
 
 ```Haskell
 f = read @Int
@@ -433,7 +433,7 @@ xs = [x^2 | x <- [1..10]]
 
 ---
 ## `[|  |]`, `[e|  |]`, `[d|  |]`, `[t|  |]`, `[p|  |]` : Template Haskell’s quotation syntax (expression, declaration, type, and pattern)
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/template_haskell.html#template-haskell) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/template_haskell.html#template-haskell) \]
 
 ```Haskell
 add1 x = [| x + 1 |]
@@ -442,7 +442,7 @@ add1 x = [| x + 1 |]
 
 ---
 ## `[varid|  |]` : Template Haskell’s quasi-quotation syntax
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/template_haskell.html#template-haskell) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/template_haskell.html#template-haskell) \]
 
 ```Haskell
 greet name = [interpolate| Hello, #name! |]
@@ -451,7 +451,7 @@ greet name = [interpolate| Hello, #name! |]
 
 ---
 ## `[||  ||]` : Typed Template Haskell’s quotation syntax
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/template_haskell.html#template-haskell) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/template_haskell.html#template-haskell) \]
 
 ```Haskell
 add1 x = [|| x + 1 ||]
@@ -471,7 +471,7 @@ f _    =
 
 ---
 ## `_` : unused identifiers beginning with underscore
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/using-warnings.html#ghc-flag--Wunused-binds) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/using-warnings.html#ghc-flag--Wunused-binds) \]
 \[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch2.html#x7-180002.4) \]
 
 ```Haskell
@@ -481,7 +481,7 @@ _w = True                -- No warning: _w starts with an underscore
 
 ---
 ## `_` : "typed hole" (expression level)
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/typed_holes.html#typed-holes) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/typed_holes.html#typed-holes) \]
 
 ```Haskell
 sum xs = foldr _ 0 xs
@@ -490,7 +490,7 @@ sum xs = foldr _ 0 xs
 
 ---
 ## `_` : "type wildcard" (type level)
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/partial_type_signatures.html#type-wildcards) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/partial_type_signatures.html#type-wildcards) \]
 
 ```Haskell
 not' :: Bool -> _
@@ -500,7 +500,7 @@ not' x = not x
 
 ---
 ## `_` : "extra-constraints wildcard"
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/partial_type_signatures.html#extra-constraints-wildcard) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/partial_type_signatures.html#extra-constraints-wildcard) \]
 
 ```Haskell
 arbitCs :: _ => a -> String
@@ -509,7 +509,7 @@ arbitCs :: _ => a -> String
 
 ---
 ## `_` : "NumericUnderscores"
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/numeric_underscores.html#numeric-underscores) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/numeric_underscores.html#numeric-underscores) \]
 
 ```Haskell
 million = 1_000_000
@@ -527,7 +527,7 @@ add1 = \x -> x + 1
 
 ---
 ## `\case ->` : "LambdaCase"
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/lambda_case.html#lambda-case) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/lambda_case.html#lambda-case) \]
 
 ```Haskell
 f = \case
@@ -566,7 +566,7 @@ data MyPoint = Point { x :: Int, y :: Int }
 
 ---
 ## `{..}` : "record wildcard"
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/record_wildcards.html#record-wildcards) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/record_wildcards.html#record-wildcards) \]
 
 ```Haskell
 f Vec{..} = 
@@ -577,8 +577,8 @@ f Vec{..} =
 ## `{-#  #-}` : "compiler pragma"
 
 \[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch12.html#x19-18800012) \]
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/pragmas.html) \]
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/table.html) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/pragmas.html) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/table.html) \]
 
 ```Haskell
 {-# LANGUAGE TypeApplications #-}
@@ -601,7 +601,7 @@ clip255 x
 
 ---
 ## `|` : "MultiWayIf"
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/multiway_if.html#extension-MultiWayIf) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/multiway_if.html#extension-MultiWayIf) \]
 
 ```Haskell
 if | x == ":q" -> quit
@@ -621,7 +621,7 @@ data Maybe a = Nothing | Just a
 
 ---
 ## `|` : "functional dependency"
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/functional_dependencies.html#functional-dependencies) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/functional_dependencies.html#functional-dependencies) \]
 
 ```Haskell
 class Foo a b c | a b -> c where 
@@ -639,7 +639,7 @@ f1 ~(as,bs) =
 
 ---
 ## `~` : "equality constraint"
-\[ [GHC User’s Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/equality_constraints.html#equality-constraints) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/equality_constraints.html#equality-constraints) \]
 
 ```Haskell
 class (F a ~ b) => C a b where
