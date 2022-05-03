@@ -629,11 +629,21 @@ class Foo a b c | a b -> c where
 
 
 ---
-## `~` : "irrefutable pattern"
+## `~` : "irrefutable pattern" (lazy pattern)
 \[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html#x8-580003.17) \]
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/strict.html#strict-by-default-pattern-bindings) \]
 
 ```Haskell
 f1 ~(as,bs) =
+```
+
+
+---
+## `~` : laziness flag
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/strict.html#strict-by-default-data-types) \]
+
+```Haskell
+data T = C ~a
 ```
 
 
@@ -643,23 +653,4 @@ f1 ~(as,bs) =
 
 ```Haskell
 class (F a ~ b) => C a b where
-```
-
-
----
-## `~` : "laziness flag"
-\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/strict.html#strict-by-default-data-types) \]
-
-```Haskell
-data T = C a
-data T' = C' ~a
-```
-
-
----
-## `~` : "lazy pattern"
-\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/strict.html#strict-by-default-pattern-bindings) \]
-
-```Haskell
-f ~x =
 ```
