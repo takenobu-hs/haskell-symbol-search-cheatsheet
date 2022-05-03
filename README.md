@@ -629,12 +629,21 @@ class Foo a b c | a b -> c where
 
 
 ---
-## `~` : "irrefutable pattern" (lazy pattern)
+## `~` : "irrefutable pattern"
 \[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html#x8-580003.17) \]
-\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/strict.html#strict-by-default-pattern-bindings) \]
 
 ```Haskell
 f1 ~(as,bs) =
+```
+
+
+## `~` : lazy pattern when Strict is enabled
+\[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/strict.html#strict-by-default-pattern-bindings) \]
+
+```Haskell
+{-# LANGUAGE Strict #-}
+
+f ~x =
 ```
 
 
