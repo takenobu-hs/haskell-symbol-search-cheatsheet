@@ -42,6 +42,17 @@ data Int = I# Int#
 
 
 ---
+## `#` : "ExtendedLiterals"
+\[ [GHC User's Guide](https://ghc.gitlab.haskell.org/ghc/doc/users_guide/exts/extended_literals.html) \]
+
+```Haskell
+f x = case x of
+        123#Int8 -> False
+        _        -> True
+```
+
+
+---
 ## `#` : "OverloadedLabels"
 \[ [GHC User's Guide](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/exts/overloaded_labels.html#overloaded-labels) \]
 
