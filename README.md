@@ -413,6 +413,15 @@ f = read @Int
 
 
 ---
+## `@` : "type abstraction"
+\[ [GHC User's Guide](https://downloads.haskell.org/ghc/latest/docs/users_guide/exts/type_abstractions.html) \]
+
+```Haskell
+class C @k a where 
+```
+
+
+---
 ## `[]` : "empty list" (nil)
 \[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html#x8-340003.7) \]
 \[ [Haskell 2010 Language Report](https://www.haskell.org/onlinereport/haskell2010/haskellch6.html#x13-1200006.1.3) \]
